@@ -1,0 +1,22 @@
+{
+  "name": "game-prompt",
+  "version": "0.0.1",
+  "description": "A dead simple prompt for command line based text games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobdfriedmann/game-prompt.git"
+  },
+  "author": "Jacob Friedmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobdfriedmann/game-prompt/issues"
+  },
+  "homepage": "https://github.com/jacobdfriedmann/game-prompt#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
