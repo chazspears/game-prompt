@@ -5,6 +5,11 @@ prompt.message = '';
 prompt.delimiter = '\n';
 
 function simplePrompt(question, next) {
+  if (next.length > 0) {
+    prompt.delimiter = '\n=>';
+  } else {
+    prompt.delimiter = '\n';
+  }
   prompt.get([{
     description: question,
     name: 'answer'
@@ -17,10 +22,12 @@ function gamePrompt(prompts, next, answer) {
   if (typeof prompts === 'string') {
     simplePrompt(prompts, next);
   } else if (prompts.length === 0) {
-    return next(answer);
+    next(answer);
+  } else if (prompts.length === 1) {
+    simplePrompt(prompts[0], next);
   } else {
-    simplePrompt(prompts[0], function(answer) {
-      gamePrompt(prompts.splice(1), next, answer);
+    simplePrompt(prompts[0], function() {
+      gamePrompt(prompts.splice(1), next, arguments[0]);
     });
   }
 }

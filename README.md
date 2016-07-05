@@ -26,7 +26,7 @@ gamePrompt('What is your name?', processAnswer);
 ```
 $ node myGame.js
 What is your name?
-[Jacob
+=> Jacob
 Hello Jacob
 ```
 
@@ -53,6 +53,6 @@ $ node myGame.js
 Hello, welcome to the game
 
 What is your name?
-[Jacob
+=> Jacob
 Hello Jacob
 ```
