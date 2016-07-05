@@ -19,6 +19,9 @@ function simplePrompt(question, next) {
 }
 
 function gamePrompt(prompts, next, answer) {
+  if (!next) {
+    next = function() {};
+  }
   if (typeof prompts === 'string') {
     simplePrompt(prompts, next);
   } else if (prompts.length === 0) {
